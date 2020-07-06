@@ -2,13 +2,13 @@ import React from 'react';
 
 const ArticlePage = () => (
     <>
-        <h1 color="blue">Articles</h1>
+        <h1>Articles</h1>
         
 
         <p1><h2>Three Tips for Working Remotely</h2></p1>
         <p1>
             <h3 >1. Create a new norm</h3>
-            <div className="cool-text" >
+            <div  >
             Try to follow your normal work routine to stay productive. If you normally shower every morning or
             listen to a podcast on your commute, you should still do those things. It sets the right tone for
             the day (whatever that may be). Also, it’s important to stay flexible, but also maintain boundaries
