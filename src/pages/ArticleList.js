@@ -2,7 +2,7 @@ import React from 'react';
 
 const ArticleList = () => (
     <>
-        <h1 color="blue">Welcome to our brand New Blogging site.</h1>
+        <h1 color="blue">Article List</h1>
         
 
         <p1><h2>Three Tips for Working Remotely</h2></p1>
