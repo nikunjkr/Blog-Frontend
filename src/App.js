@@ -10,9 +10,10 @@ import {
 import HomePage from './pages/HomePage';
 import './App.css';
 import ArticlePage from './pages/ArticlePage';
-import ArticleList from './pages/ArticleList';
+import ArticleListPage from './pages/ArticleListPage';
 import AboutPage from './pages/AboutPage';
 import NavBar from './NavBar';
+import ErrorPage from './pages/ErrorPage';
 
 class App extends Component {
   render() {
@@ -22,9 +23,11 @@ class App extends Component {
           <NavBar />
           <div id="page-body">
             <Route path="/" component={HomePage} exact />
-            <Route path="/articles" component={ArticlePage} exact />
-            <Route path="/articles-list" component={ArticleList} exact />
-            <Route path="/about" component={AboutPage} exact />
+            <Route path="/article/:name" component={ArticlePage} exact />
+            <Route path="/articles-list" component={ArticleListPage} exact />
+            <Route path="/about/" component={AboutPage} exact />
+            <Route component={ErrorPage}/>
+            
 
           </div>
 

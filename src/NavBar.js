@@ -1,3 +1,8 @@
+/*
+    Navbar for our blog app
+    {Link } has been imported Link takes a prop 'to' <a> tag donot work
+*/
+
 import React from 'react';
 import  {Link} from 'react-router-dom' ;
 

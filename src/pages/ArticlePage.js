@@ -1,25 +1,41 @@
 import React from 'react';
+import articles from './article-contents';
+import ArticleList from '../components/ArticleList'
+/*
+    match contains params
+*/
+const ArticlePage = ({ match }) => {
 
-const ArticlePage = () => (
-    <>
-        <h1>Articles</h1>
-        
+    const name = match.params.name;
 
-        <p1><h2>Three Tips for Working Remotely</h2></p1>
-        <p1>
-            <h3 >1. Create a new norm</h3>
-            <div  >
-            Try to follow your normal work routine to stay productive. If you normally shower every morning or
-            listen to a podcast on your commute, you should still do those things. It sets the right tone for
-            the day (whatever that may be). Also, it’s important to stay flexible, but also maintain boundaries
-            for your working hours. I find it incredibly easy to lose track of time working and, before I know
-            it, it’s 9 p.m.! Set expectations with your manager on when you plan to be online, and whether you
-            need to be available outside your 9-5.
-            </div>
-        </p1>
+    //find name in articles of article-contents
+    const article = articles.find(article => article.name === name)
 
+    if(!article)
+    {
+        return (
+            <h1>This article doesn't exist</h1>
+        )
+    }
 
-    </>
-)
+    //
+    const recommendedArticles = articles.filter(article=> article !== name)
+
+    return (
+        <>
+            <h1>{article.title}</h1>
+            {article.content.map((paragraph, key) => (
+                <p key={key}>
+                    {paragraph}
+                </p>
+            ))}
+           
+            <p>
+                <ArticleList articles = {recommendedArticles}/>
+            </p>
+
+        </>
+    )
+}
 
 export default ArticlePage;
