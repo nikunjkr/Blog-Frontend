@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
@@ -21,15 +22,18 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar />
+
           <div id="page-body">
-            <Route path="/" component={HomePage} exact />
-            <Route path="/article/:name" component={ArticlePage} exact />
-            <Route path="/articles-list" component={ArticleListPage} exact />
-            <Route path="/about/" component={AboutPage} exact />
-            <Route component={ErrorPage}/>
-            
+            <Switch>
+              <Route path="/" component={HomePage} exact />
+              <Route path="/article/:name" component={ArticlePage} exact />
+              <Route path="/articles-list" component={ArticleListPage} exact />
+              <Route path="/about/" component={AboutPage} exact />
+              <Route component={ErrorPage} />
+            </Switch>
 
           </div>
+
 
         </div >
       </Router>

@@ -5,8 +5,10 @@ const ArticlesList = ({ articles }) => (
     <>
     {articles.map((article, key) => (
         <Link  key={key} to={`/article/${article.name}`}>
+            <div>
             <h3>{article.title}</h3>
-            <p>{article.content[0].substring(0, 150)}...</p>
+            <h4>{article.content[0].substring(0, 150)}...</h4>
+            </div>
         </Link>
     ))}
     </>

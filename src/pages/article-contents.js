@@ -1,7 +1,7 @@
 const articles = [
 
     {
-        name: 'learn-stl',
+        name: 'stl',
         title: 'Important functions of STL Components in C++',
         content: [
             `STL provides a range of data structures that are very useful in various scenarios.A
