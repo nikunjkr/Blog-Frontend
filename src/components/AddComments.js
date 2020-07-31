@@ -8,14 +8,16 @@ const AddCommentForm = ({ articleName, setArticleInfo }) => {
         const result = await fetch(`/api/article/${articleName}/add-comment`, {
 
             method: 'post',
-            body: JSON.stringify({ username, comments: commentText }),
+            body: JSON.stringify({username: username, comments: commentText}),
             //include a header
             headers: {
                 'Content-Type': 'application/json',
             }
         });
+       
         const body = await result.json();
         setArticleInfo(body);
+        
         setUsername('');
         setCommentText('');       
     }

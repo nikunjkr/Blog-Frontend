@@ -7,9 +7,11 @@ const UpvotesSection = ({ articleName, upvotes, setArticleInfo }) => {
             method: 'post',
         })
             .then((result) => {
+                console.log(result)
                 return result.json();
             })
             .then((body) => {
+                console.log(body)
                 return setArticleInfo(body);
 
             })

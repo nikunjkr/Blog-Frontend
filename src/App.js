@@ -15,32 +15,41 @@ import ErrorPage from "./pages/ErrorPage";
 class App extends Component {
   render() {
     return (
+      <>
       <Router>
         <div>
-           <NavBar />
+          <NavBar />
         </div>
-        
+
         <div className="container-fluid">
           <div className="col">
-            <br/><br/><br/><br/>
-          <div >
+            <br />
+            <br />
+            <br />
+            <br />
             <div>
-              <Switch>
-                <Route path="/" component={HomePage} exact />
-                <Route path="/article/:name" component={ArticlePage} exact />
-                <Route
-                  path="/articles-list"
-                  component={ArticleListPage}
-                  exact
-                />
-                <Route path="/about/" component={AboutPage} exact />
-                <Route component={ErrorPage} />
-              </Switch>
+              <div>
+                <Switch>
+                  <Route path="/" component={HomePage} exact />
+                  <Route path="/article/:name" component={ArticlePage} exact />
+                  <Route
+                    path="/articles-list"
+                    component={ArticleListPage}
+                    exact
+                  />
+                  <Route path="/about/" component={AboutPage} exact />
+                  <Route component={ErrorPage} />
+                </Switch>
+              </div>
             </div>
           </div>
         </div>
-        </div>
       </Router>
+      <footer>
+        <h3>Created by Nikunj</h3>
+      </footer>
+      </>
+     
     );
   }
 }
