@@ -6,8 +6,8 @@ const ArticlesList = ({ articles }) => (
     {articles.map((article, key) => (
         <Link  key={key} to={`/article/${article.name}`}>
             <div>
-            <h3>{article.title}</h3>
-            <h4>{article.content[0].substring(0, 150)}...</h4>
+            <h5 ><b>{article.title}</b></h5><br/>
+            <h5>{article.content[0].substring(0, 150)}...</h5>
             </div>
         </Link>
     ))}

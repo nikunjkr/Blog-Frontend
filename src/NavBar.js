@@ -7,16 +7,16 @@ import React from 'react';
 import  {Link} from 'react-router-dom' ;
 
 const NavBar = () =>(
-    <nav>
-        <ul>
-            <li className='active'>
+    <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+        <ul className="navbar-nav" >
+            <li className="nav-link" >
                 <Link className='dark-link' to="/">Home</Link>
             </li>
-            <li>
+            <li className="nav-link">
                 <Link to="/about">About</Link>
 
             </li>
-            <li>
+            <li className="nav-link">
                 <Link to="/articles-list"> Articles</Link>
             </li>
         </ul>
